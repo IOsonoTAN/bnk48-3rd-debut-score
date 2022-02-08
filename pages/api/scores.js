@@ -38,7 +38,7 @@ export default async function handler(req, res) {
   const fractor = new BigNumber("1000000000000000000");
 
   for (let index = 0; index < members.length; index++) {
-    let amount = await page.$(getVote(index))
+    const amount = await page.$(getVote(index))
     let value = await page.evaluate(el => el.textContent, amount)
     value = value.replace("(uint256) :", "");
     value = new BigNumber(value)
