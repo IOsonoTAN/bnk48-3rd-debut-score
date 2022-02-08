@@ -1,7 +1,7 @@
 import 'antd/dist/antd.min.css'
 import Head from 'next/head'
 import Link from 'next/link'
-import { Button, Divider, Row, Col, Table, Tooltip, Tag, Space } from 'antd'
+import { Button, Divider, Row, Col, Table, Tooltip, Tag } from 'antd'
 import { ReloadOutlined, FacebookOutlined } from '@ant-design/icons'
 import { useEffect, useState } from 'react'
 import { DateTime } from 'luxon'
@@ -120,22 +120,13 @@ export default function Home() {
         <Divider />
         <Row justify="center" align="middle">
           <Col span={24} style={{ textAlign: 'center' }}>
-            <Space>
-              <Link href="https://www.facebook.com/bnk48official.minmin" passHref>
-                <a target="_blank">
-                  <Tag icon={<FacebookOutlined />} color="#3b5999">
-                    Minmin BNK48
-                  </Tag>
-                </a>
-              </Link>
-              <Link href="https://www.facebook.com/minminbnk48.fc" passHref>
-                <a target="_blank">
-                  <Tag icon={<FacebookOutlined />} color="#3b5999">
-                    Minmin BNK48 Thailand Fanclub
-                  </Tag>
-                </a>
-              </Link>
-            </Space>
+            <Link href="https://www.facebook.com/minminbnk48.fc" passHref>
+              <a target="_blank">
+                <Tag icon={<FacebookOutlined />} color="#3b5999">
+                  Minmin BNK48 Thailand Fanclub
+                </Tag>
+              </a>
+            </Link>
           </Col>
         </Row>
       </div>
