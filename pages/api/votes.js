@@ -44,11 +44,11 @@ export default async function handler(req, res) {
     value = new BigNumber(value)
     ranked.push({
       name: members[index],
-      score: value.dividedBy(fractor).toFixed(10)
+      vote: value.dividedBy(fractor).toFixed(10)
     })
   }
 
-  ranked.sort((a, b) => b.score - a.score)
+  ranked.sort((a, b) => b.vote - a.vote)
 
   await browser.close()
 
