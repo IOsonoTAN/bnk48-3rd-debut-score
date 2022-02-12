@@ -1,7 +1,17 @@
 import 'antd/dist/antd.min.css'
 import Head from 'next/head'
 import Link from 'next/link'
-import { BackTop, Button, Divider, Row, Col, Table, Tooltip, Tag } from 'antd'
+import {
+  BackTop,
+  Button,
+  Col,
+  Divider,
+  Row,
+  Table,
+  Tag,
+  Tooltip,
+  Typography,
+} from 'antd'
 import { ReloadOutlined, FacebookOutlined } from '@ant-design/icons'
 import { useEffect, useState } from 'react'
 import { DateTime } from 'luxon'
@@ -88,7 +98,7 @@ export default function Home() {
 
       <BackTop visibilityHeight={100} />
       <div style={{ maxWidth: 500, margin: '0 auto', padding: 20 }}>
-        <Row justify="space-between" style={{ margin: '10px 0 20px 0' }}>
+        <Row justify="space-between">
           <Col span={18}>
             <div className="updated-at">
               Updated: <strong>{lastUpdated.toFormat('dd LLL yyyy, HH:mm:ss')}</strong>
@@ -106,7 +116,7 @@ export default function Home() {
             />
           </Col>
         </Row>
-        <Row>
+        <Row style={{ margin: '10px 0' }}>
           <Col span={24}>
             <Table
               loading={isLoading}
@@ -121,7 +131,10 @@ export default function Home() {
         <Divider />
         <Row justify="center" align="middle">
           <Col span={24} style={{ textAlign: 'center' }}>
-            <Link href="https://www.facebook.com/minminbnk48.fc" passHref>
+            <Typography.Text strong>
+              Wants to donate to us?
+            </Typography.Text>
+            <Link href="https://www.facebook.com/minminbnk48.fc/posts/493345615483266" passHref>
               <a target="_blank">
                 <Tag icon={<FacebookOutlined />} color="#3b5999">
                   Minmin BNK48 Thailand Fanclub
